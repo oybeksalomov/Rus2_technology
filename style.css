@@ -1,0 +1,181 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Gotham Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;  
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+li {
+    list-style: none;
+}
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+button {
+    cursor: pointer;
+}
+
+/** Header start*/
+header {
+    height: 8rem;
+    background: linear-gradient(90deg, #9E0B37 0.98%, #FFC531 72.22%, #9E0B37 99.95%);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+}
+.navItems {
+    display: flex;
+    justify-content: space-between;
+    max-width: 43.7rem;
+    width: 100%;
+    margin-right: 4rem;
+}
+.navItem {
+    color: #FFF;
+    font-size: 1.6rem;
+}
+.navItemCollapse {
+    color: #FFF;
+    font-size: 1.6rem;
+}
+.headerButtons {
+    display: flex;
+    gap: 4rem
+}
+.signInButton {
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 1.6rem;
+}
+.signUpButton {
+    font-size: 1.6rem;
+    color: #fff;
+    display: flex;
+    width: 160px;
+    height: 49px;
+    padding: 24px 72px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 40px;
+    background: rgba(158, 11, 55, 0.70);
+    box-shadow: 4px 4px 6px 0px rgba(255, 255, 255, 0.50) inset, 4px 4px 20px 0px rgba(223, 80, 23, 0.80);
+}
+.headerToggle {
+    position: absolute;
+    display: none;
+    border: none;
+    background: none;
+}
+
+/** Title start */
+
+/** Title end */
+
+@media (max-width: 1439.98px) {
+    
+}
+
+@media (max-width: 1279.98px) {
+    
+}
+
+@media (max-width: 1023.98px) {
+    
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    header {
+        height: 5rem;
+    }
+    .toggleBox {
+        height: 100%;
+        position: relative;
+    }
+    .headerToggle {
+        display: block;
+        top: 50%;
+        transform: translateY(25%);
+        right: 1rem;
+    }
+    .navbar {
+        position: absolute;
+        flex-direction: column;
+        background: linear-gradient(90deg, #9E0B37 0.98%, #FFC531 72.22%, #9E0B37 99.95%);
+        height: calc(100vh - 5rem);
+        width: 100%;
+        left: 0;
+        top: 5rem;
+        padding: 2rem 4rem;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
+        
+    }
+    .navbarIsOpen {
+        transform: translateX(0);
+    }
+    .navItems {
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 100%;
+    }
+    .isCloseIcon {
+        display: none;
+    }
+    .isOpenIcon {
+        display: block;
+    }
+}
+
+@media (max-width: 639.98px) {
+    
+}
