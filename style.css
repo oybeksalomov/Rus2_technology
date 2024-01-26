@@ -455,10 +455,6 @@ header {
 }
 /** Slider end */
 @media (max-width: 1439.98px) {
-    
-}
-
-@media (max-width: 1279.98px) {
     .aboutContainer {
         flex-direction: column;
     }
@@ -467,10 +463,15 @@ header {
         flex-direction: row;
         justify-content: center;
         flex-flow: wrap;
+        gap: 2rem;
     }
     .leftBox {
         margin-right: 0;
     }
+}
+
+@media (max-width: 1279.98px) {
+
 }
 
 @media (max-width: 1023.98px) {
@@ -515,6 +516,13 @@ header {
         flex-direction: column;
         gap: 2rem;
         max-width: 100%;
+    }
+    .collapseContent {
+        background: none;
+        position: static;
+        padding: 0;
+        padding-left: 2rem;
+        border-radius: none;
     }
     .isCloseIcon {
         display: none;

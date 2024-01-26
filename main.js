@@ -25,12 +25,8 @@ const openMenu = () => {
         navbarCloseIcon.classList.remove('isOpenIcon')
     }
 
-    document.html.style.overflow = isOpen ? 'hidden' : 'auto'
+    document.documentElement.style.overflow = isOpen ? 'hidden' : 'auto'
 }
-
-window.addEventListener('resize', () => {
-    document.html.style.overflow = isOpen && window.innerWidth < 768 ? 'hidden' : 'auto'
-})
 
 headerToggleButton.addEventListener('click', openMenu)
 
@@ -41,6 +37,17 @@ const openCollapse = () => {
 }
 
 navItemCollapse.addEventListener('click', openCollapse)
+
+window.addEventListener('resize', () => {
+    document.documentElement.style.overflow = isOpen && window.innerWidth < 768 ? 'hidden' : 'auto'
+    if(window.innerWidth > 768 && isOpen) {
+        openMenu()
+        if(isOpenCollapse) {
+            openCollapse()
+        }
+        
+    }
+})
 
 const addEvents = (duplicatedItem, index) => {
     duplicatedItem.setAttribute("aria-hidden", true);
