@@ -264,7 +264,6 @@ header {
     width: 12.1739rem;
     height: 4rem;
 }
-
 .rightBox {
     display: flex;
     flex-direction: column;
@@ -454,6 +453,7 @@ header {
     }
 }
 /** Slider end */
+
 @media (max-width: 1439.98px) {
     .aboutContainer {
         flex-direction: column;
@@ -468,14 +468,6 @@ header {
     .leftBox {
         margin-right: 0;
     }
-}
-
-@media (max-width: 1279.98px) {
-
-}
-
-@media (max-width: 1023.98px) {
-    
 }
 
 @media (max-width: 767.98px) {
