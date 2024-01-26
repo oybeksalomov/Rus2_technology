@@ -298,12 +298,16 @@ header {
     width: 270px;
     transform: rotate(7deg);
 }
+.thridInfo {
+    position: relative;
+}
 .ellipsesPicturesBox {
     width: 100%;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    position: absolute;
 }
 .ellipsesConateiner {
     width: 116rem;
@@ -367,6 +371,9 @@ header {
     display: flex;
     gap: 2rem;
     margin-right: 2rem;
+}
+.fourthInfo {
+    margin-top: 60rem;
 }
 .card {
     width: 22rem;

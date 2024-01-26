@@ -14,7 +14,6 @@ let isOpenCollapse = false
 const openMenu = () => {
     isOpen = !isOpen
 
-    console.log(isOpen)
     if(isOpen) {
         navbar.classList.add('navbarIsOpen')
         navbarIcon.classList.remove('isOpenIcon')
@@ -48,25 +47,19 @@ window.addEventListener('resize', () => {
     }
 })
 
-const addEvents = (duplicatedItem, index) => {
+const addEvents = (duplicatedItem) => {
     duplicatedItem.setAttribute("aria-hidden", true);
-    duplicatedItem.addEventListener('mouseover', () => {
-        pauseAnimation('add', index);
-    });
-    duplicatedItem.addEventListener('mouseout', () => {
-        pauseAnimation('remove', index);
-    });
 };
 
 const addAnimation = () => {
 
-    slides.forEach((slide, index) => {
+    slides.forEach((slide) => {
         const sliderContainer = slide.querySelector('.sliderContainer');
         const slideContent = Array.from(sliderContainer.children);
 
         slideContent.forEach((item) => {
             const duplicatedItem = item.cloneNode(true);
-            addEvents(duplicatedItem, index);
+            addEvents(duplicatedItem);
             sliderContainer.appendChild(duplicatedItem);
         });
     });
